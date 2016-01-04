@@ -7,7 +7,7 @@ Arduino based RCX2 Programmer to be used with lejosfirmdl.exe
 Hardware layout for the RCX Programmer.
 ---------------------
 
-...
+```
 Pin usage IR LED and TSOP for 950nm and 38kHz carrier:
 
  IR-LED:SFH-409                 TSOP 31236
@@ -21,7 +21,7 @@ Pin usage IR LED and TSOP for 950nm and 38kHz carrier:
     9      10           11     12     13    GND
 
 ARDUINO
-...
+```
 
 Precondition
 ---------------------
@@ -29,7 +29,7 @@ Arduino drivers are installed.
 
 
 Description
----------------------
+-----
 This is a half duplex solution. Therefore it needs aprox. twice the time
 for programming the lego RCX brick when compared to the original lego tower.
 For example: for programming a 7850 Bytes program you need about 
@@ -46,9 +46,9 @@ A future version might use interupts and could be able to do
 transmission in full duplex to speed up data transfer.
 
 If the Arduino pops up as e.g. COM16 you have to use port \\\.\COM16 for lejosfirmdl:
-...
+```
 lejosfirmdl --tty=\\\.\COM16 HelloWorld.srec
-...
+```
 
 
 
