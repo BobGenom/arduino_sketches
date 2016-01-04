@@ -17,7 +17,6 @@
  * ARDUINO
  *
  * Precondition
- *
  * Arduino drivers are installed.
  *
  *
