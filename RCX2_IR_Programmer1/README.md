@@ -1,7 +1,7 @@
-RCX2_IR_Programmer1
+Lego Brick RCX2 IR Programmer1
 ================
 
-Arduino based RCX2 Programmer to be used with lejosfirmdl.exe
+Arduino based RCX2 Programmer to be used with lejosfirmdl.exe. No soldering is needed.
 
 
 Hardware layout for the RCX Programmer.
@@ -22,6 +22,7 @@ Pin usage IR LED and TSOP for 950nm and 38kHz carrier:
 
 ARDUINO
 ```
+I guess other TSOPs with 950nm and 38kHz carrier will do as well.
 
 Precondition
 ---------------------
@@ -45,7 +46,7 @@ generic solution which should work on many Arduino flavours.
 A future version might use interupts and could be able to do
 transmission in full duplex to speed up data transfer.
 
-If the Arduino pops up as e.g. COM16 you have to use port \\\.\COM16 for lejosfirmdl:
+If the Arduino pops up as e.g. COM16 you have to use port \\\\\\.\COM16 for lejosfirmdl:
 ```
 lejosfirmdl --tty=\\\.\COM16 HelloWorld.srec
 ```
