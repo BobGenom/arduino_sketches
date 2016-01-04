@@ -1,13 +1,14 @@
-Lego Brick RCX2 IR Programmer1
+Lego Brick RCX2 IR Programmer Version 1
 ================
 
 Arduino based RCX2 Programmer to be used with lejosfirmdl.exe as a substitute for the Lego IR Tower. No soldering is needed.
 
 Part list:
 * Arduino (I have a Yun)
-* IR LED (I had SFH-409)
+* IR LED (I used SFH-409)
+* IR Receiver (I used a TSOP 31236)
+
 ![IR LED](http://www.conrad.de/medias/global/ce/1000_1999/1500/1540/1543/154380_BB_00_FB.EPS_250.jpg)
-* IR Receiver (I had a TSOP 31236)
 ![TSOP](http://elcodis.com/photos/15/68/156835/vishaysemitsop38238_sml.jpg)
 
 Hardware layout for the RCX Programmer.
