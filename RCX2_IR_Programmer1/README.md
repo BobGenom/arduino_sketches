@@ -29,7 +29,7 @@ Pin usage IR LED and TSOP for 950nm and 38kHz carrier:
 
 ARDUINO
 ```
-I guess other TSOPs with 950nm and 38kHz carrier will do as well.
+I guess similar TSOPs with 950nm and 38kHz carrier will do as well.
 
 Precondition
 ---------------------
@@ -61,7 +61,7 @@ If the Arduino pops up as e.g. COM16 you have to use port \\\\\\.\COM16 for lejo
 lejosfirmdl --tty=\\\.\COM16 HelloWorld.srec
 ```
 
-Works best within a distance of less than 10 cm between the Arduino IR Programmer and the Lego RCX2 Brick.
+Works best within a distance of less than 10cm between the Arduino IR Programmer and the Lego RCX2 Brick.
 
 
 
