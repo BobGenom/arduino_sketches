@@ -29,12 +29,12 @@
  *  80 secs.
  *
  * This is, because producing the carrier 38khz when sending
- * a data byte over IR is done busy waiting and not using interupts.
+ * a data byte over IR is done busy waiting and not using interrupts.
  * All timing values in function send(data) are manualy optimized for
- * a 16MHz ATMega328p. So this (not using interupts) is a more 
+ * a 16MHz ATMega328p. So this (not using interrupts) is a more 
  * generic solution which should work on many Arduino flavours.
  *
- * A future version might use interupts and could be able to do
+ * A future version might use interrupts and could be able to do
  * transmission in full duplex to speed up data transfer.
  * 
  */
