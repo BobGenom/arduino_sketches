@@ -70,7 +70,7 @@ If the Arduino pops up as e.g. COM16 you have to use port \\\\\\.\COM16 for lejo
 lejosfirmdl --tty=\\\.\COM16 HelloWorld.srec
 ```
 
-Works best within a distance of less than 10cm between the Arduino IR Programmer and the Lego RCX2 Brick.
+Works best within a distance of less than 10cm between the Arduino IR Programmer and the Lego RCX2 Brick. (Because there is not much current between Pin 10 and Pin 9 to drive the IR LED.)
 
 
 
