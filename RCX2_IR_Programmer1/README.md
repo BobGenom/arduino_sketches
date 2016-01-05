@@ -1,7 +1,7 @@
 Lego Brick RCX2 IR Programmer Version 1
 ================
 
-Arduino based RCX2 Programmer to be used with lejosfirmdl.exe as a substitute for the Lego IR Tower. No soldering is needed.
+Arduino based RCX2 Programmer to be used with lejosfirmdl.exe as a substitute for the Lego IR Tower. Incredible simple hardware design with zero soldering.
 
 Part list:
 * Arduino (I have a Yun)
@@ -53,10 +53,15 @@ generic solution which should work on many Arduino flavours.
 A future version might use interupts and could be able to do
 transmission in full duplex to speed up data transfer.
 
+
+Usage
+-----
 If the Arduino pops up as e.g. COM16 you have to use port \\\\\\.\COM16 for lejosfirmdl:
 ```
 lejosfirmdl --tty=\\\.\COM16 HelloWorld.srec
 ```
+
+Works best within a distance of less than 10 cm between the Arduino IR Programmer and the Lego RCX2 Brick.
 
 
 
