@@ -1,7 +1,7 @@
 Lego Brick RCX 2.0 IR Programmer Version 1
 ================
 
-Arduino based RCX 2.0 Programmer to be used with lejosfirmdl.exe as a substitute for the Lego IR Tower. Incredible simple hardware design with zero soldering. Made to upload HaikuVM and LeJOS firmware and programs to the RCX 2.0.
+Arduino based RCX 2.0 Programmer to be used with lejosfirmdl.exe as a substitute for the Lego IR Tower. Ii is an incredible simple hardware design with zero soldering. Made to upload HaikuVM and LeJOS firmware and programs to the RCX 2.0.
 
 Part list
 -----------
