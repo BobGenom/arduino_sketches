@@ -29,12 +29,12 @@
  *  80 secs.
  *
  * This is, because producing the carrier 38khz when sending
- * a data byte over IR is done busy waiting and not using interrupts.
+ * a data byte over IR is done busy waiting and not using interupts.
  * All timing values in function send(data) are manualy optimized for
- * a 16MHz ATMega328p. So this (not using interrupts) is a more 
+ * a 16MHz ATMega328p. So this (not using interupts) is a more 
  * generic solution which should work on many Arduino flavours.
  *
- * A future version might use interrupts and could be able to do
+ * A future version might use interupts and could be able to do
  * transmission in full duplex to speed up data transfer.
  * 
  */
@@ -72,24 +72,26 @@ int CountSetBits (int x)
  */ 
 void send(int data) {
   data= (data<<1) | ((CountSetBits(data)&1)?0:PARITYBIT) | STOPBIT;
+  noInterrupts();
   for(uint8_t b=11; b; b--) {
     if(data&1){
-      for(uint8_t i=0; i<15; i++) {
+      for(uint8_t i=0; i<14; i++) {
         digitalWrite(TX_PIN, LOW);
-        delayMicroseconds(6);
+        delayMicroseconds(7);
         digitalWrite(TX_PIN, LOW);
         delayMicroseconds(7);
       }
     } else {
-      for(uint8_t i=0; i<15; i++) {
+      for(uint8_t i=0; i<14; i++) {
         digitalWrite(TX_PIN, HIGH);
-        delayMicroseconds(6);
+        delayMicroseconds(7);
         digitalWrite(TX_PIN, LOW);
         delayMicroseconds(7);
       }
     }
     data>>=1;
   }
+  interrupts();
 }
 
 void powerRX(int mode) {
@@ -125,15 +127,14 @@ void loop() { // run over and over
       Serial.write(r);
       state=2;
     } else {
-      // fake a (full duplex) IR echo to make lejosfirmdl happy
-      Serial.write(s);
       state=3;
     }
   }
   
   if (Serial.available()) {
-    powerRX(LOW);
     s=Serial.read();
+    // fake a (full duplex) IR echo to make lejosfirmdl happy
+    Serial.write(s);
     send(s);
     powerRX(HIGH);
     state=1;
