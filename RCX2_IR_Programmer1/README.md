@@ -1,7 +1,7 @@
 Lego Brick RCX 2.0 IR Programmer Version 1
 ================
 
-Arduino based RCX 2.0 Programmer to be used with lejosfirmdl.exe as a substitute for the Lego IR Tower. It is an incredible simple hardware design with zero soldering. Made to upload HaikuVM and LeJOS firmware and programs to the RCX 2.0.
+Arduino based RCX 2.0 Programmer to be used with lejosfirmdl.exe as a substitute for the Lego IR Tower. It is an incredible simple hardware design with zero soldering and zero wiring. Made to upload HaikuVM and LeJOS firmware and programs to the RCX 2.0.
 
 Part list
 -----------
@@ -47,21 +47,13 @@ Arduino drivers are installed.
 
 Description
 -----
-This is a half duplex solution. Therefore it needs aprox. twice the time
-for programming the lego RCX brick when compared to the original lego tower.
-For example: for programming a 7850 Bytes program you need about 
-150 secs whereas with a full duplex hardware you need
- 80 secs.
-
-This is, because producing the carrier 38khz when sending
+Producing the carrier 38khz when sending
 a data byte over IR is done busy waiting and not using interrupts.
 All timing values in function send(data) are manualy optimized for
 a 16MHz ATmega32u4. So this (not using interrupts) is a more 
 generic solution which should work on many Arduino flavours.
 
-A future version might use interrupts and could be able to do
-transmission in full duplex to speed up data transfer.
-
+A future version might use interrupts.
 
 Usage
 -----
@@ -70,7 +62,7 @@ If the Arduino pops up as e.g. COM16 you have to use port \\\\\\.\COM16 for lejo
 lejosfirmdl --tty=\\\.\COM16 HelloWorld.srec
 ```
 
-Works best within a distance of less than 10cm between the Arduino IR Programmer and the Lego RCX 2.0 Brick. (Because, by design,  there is not much current between Pin 10 and Pin 9 to drive the IR LED.)
+Works best within a distance of less than 30cm between the Arduino IR Programmer and the Lego RCX 2.0 Brick.
 
 
 
