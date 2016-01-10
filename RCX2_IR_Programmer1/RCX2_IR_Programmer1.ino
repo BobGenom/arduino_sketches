@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
 /**
- * Hardware layout for the RCX Programmer.
+ * Hardware layout for the RCX Programmer. Version 1.1.0
  *
  * Pin usage IR LED and TSOP for 950nm and 38kHz carrier:
  *
