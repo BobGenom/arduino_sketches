@@ -24,7 +24,7 @@ Hardware layout for the RCX Programmer.
 ---------------------
 
 ```
-Pin usage IR LED and TSOP for 950nm and 38kHz carrier:
+Pin usage IR LED and TSOP for 950nm and 36kHz carrier:
 
  IR-LED:SFH-409                 TSOP 31236
  cathode  anode
@@ -38,7 +38,7 @@ Pin usage IR LED and TSOP for 950nm and 38kHz carrier:
 
 ARDUINO
 ```
-I guess similar TSOPs with 950nm and 38kHz carrier will do as well.
+I guess similar TSOPs with 950nm and 36kHz (or even better 38kHz, which is closer to the RCX 2.0 specs.) carrier will do as well.
 
 Precondition
 ---------------------
